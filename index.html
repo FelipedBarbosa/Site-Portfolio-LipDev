@@ -8,45 +8,45 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-      <!-- Cabeçalho -->
-      <header>
-        <nav>
-          <ul class="nav-sections">
-            <li><a href="#bio">Bio</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#certificados">Certificados</a></li>
-          </ul>
-        </nav>
-
-        <!-- Logo no centro -->
-        <div class="logo-container">
-          <img src="Logo.png" alt="Logo" class="logo" />
-        </div>
-
-        <!-- Botões à direita -->
-        <div class="nav-right">
-          <a href="#" class="cv-button">BAIXAR CV</a>
-        </div>
-      </header>
-
-      <!-- Setinha -->
-      <div class="arrow-container">
-        <span class="arrow"></span>
-        <span class="arrow"></span>
-        <span class="arrow"></span>
+    <!-- Cabeçalho -->
+    <header>
+      <nav>
+        <ul class="nav-sections">
+          <li><a href="#bio">Bio</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#certificados">Certificados</a></li>
+        </ul>
+      </nav>
+      <div class="logo-container">
+        <img src="Logo.png" alt="Logo do Lipe Dev" class="logo" />
       </div>
+      <div class="nav-right">
+        <a href="seu-cv.pdf" class="cv-button" download>BAIXAR CV</a>
+      </div>
+    </header>
 
-      <!-- Imagem de recepção -->
-      <section id="recepcao">
-        <!-- Atualize assim -->
-        <img src="Banner_1.png" alt="Transformando códigos em soluções" />
-      </section>
+    <div class="arrow-container">
+      <span class="arrow"></span>
+      <span class="arrow"></span>
+      <span class="arrow"></span>
+    </div>
 
+    <!-- Imagem de recepção -->
+    <section id="recepcao">
+      <img src="Banner_1.png" alt="Transformando códigos em soluções" />
+    </section>
+
+    <main>
       <!-- Sobre Mim -->
       <section id="bio" class="bio-section">
         <div class="container">
           <div class="bio-image">
-            <img src="Imagem_Bio.jpeg" loading="lazy" class="bio-img" />
+            <img
+              src="Imagem_Bio.jpeg"
+              loading="lazy"
+              alt="Foto de Felipe Barbosa"
+              class="bio-img"
+            />
           </div>
           <div class="bio-text">
             <h1>Sobre Mim</h1>
@@ -62,14 +62,11 @@
               <span class="taghtmlegit">HTML</span>
               <span class="tagjavascript">JavaScript</span>
             </div>
-            <br />
             <p>
               Estou animado para colaborar em projetos desafiadores e continuar
               a evoluir minhas habilidades na criação de interfaces de usuário
               envolventes e eficazes.
             </p>
-
-            <!-- Botão de Download do CV -->
             <div class="download-cv">
               <a href="seu-cv.pdf" class="cv-button2" download>Baixar CV</a>
             </div>
@@ -85,7 +82,7 @@
           minhas habilidades e criatividade.
         </p>
         <div class="portfolio-grid">
-          <div class="portfolio">
+          <article class="portfolio">
             <img src="site.png" alt="Meu Site - Portfólio" />
             <div class="tags">
               <span class="taghtml">HTML</span>
@@ -100,41 +97,32 @@
               servir como um exemplo prático do meu trabalho, com foco na
               navegação intuitiva, responsividade, performance e usabilidade.
             </p>
-          </div>
+          </article>
         </div>
       </section>
-      <!-- Adicionar mais projetos -->
 
-      <!-- Área de Certificados-->
+      <!-- Área de Certificados -->
       <section id="certificados">
         <h2 class="projects-title">Certificados</h2>
         <p class="projects-description">
-          Aqui estão alguns dos meus projetos mais significativos, que mostram
-          minhas habilidades e criatividade.
+          Aqui estão alguns dos meus certificados mais significativos.
         </p>
         <div class="projects-grid">
-          <div class="projeto">
-            <img src="site.png" alt="Meu Site - Portfólio" />
-            <h3>(Meu Site) - Portfólio</h3>
-
+          <article class="projeto">
+            <img src="site.png" alt="Certificado de meu site - Portfólio" />
+            <h3>Certificado de Desenvolvimento Web</h3>
             <p>
-              Este site é um dos meus principais projetos, desenvolvido para
-              apresentar minhas habilidades como desenvolvedor front-end e
-              servir como um exemplo prático do meu trabalho, com foco na
-              navegação intuitiva, responsividade, performance e usabilidade.
+              Este certificado demonstra minhas habilidades em desenvolvimento
+              front-end e design de interfaces.
             </p>
-          </div>
+          </article>
         </div>
       </section>
-    </html>
+    </main>
   </body>
 </html>
 
-echo "# Site-Portfolio-LipeDev" >> README.md 
-git init 
-git add README.md 
-git commit -m "primeiro commit" 
-git branch -M main 
-git remote add origin https://github.com/FelipedBarbosa/Site-Portfolio-LipeDev.git
- git push -u origin main
- 
+echo "# Site-Portfolio-LipeDev" >> README.md git init git add README.md git
+commit -m "primeiro commit" git branch -M main git remote add origin
+https://github.com/FelipedBarbosa/Site-Portfolio-LipeDev.git git push -u origin
+main
