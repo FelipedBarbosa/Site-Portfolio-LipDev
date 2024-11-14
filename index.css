@@ -5,10 +5,10 @@
   box-sizing: border-box;
 }
 
-body {
+body, html {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 2.0;
-  overflow-x: hidden; /* Garante que não haja rolagem horizontal */
+  overflow-x: hidden;
 }
 
 /* Cabeçalho Responsivo */
@@ -18,34 +18,26 @@ header {
   width: 100%;
   background-color: #007AFF;
   z-index: 1000;
-  padding: 1px 40px;
+  padding: 1px 150px;
   display: flex;
-  flex-direction: row; /* Mudado para linha */
-  align-items: center; /* Centraliza verticalmente */
-  justify-content: space-between; /* Espaça os itens */
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  gap: 30px;
 }
 
 .logo-container {
   display: flex;
   justify-content: center;
   flex: 1;
-  margin-left: 150px;
+  margin-right: 20px;
 }
 
 .nav-sections {
   list-style: none;
   display: flex;
-  flex-direction: row;
-  align-items: center;
   gap: 20px;
-}
-
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-left: 20px; /* Move a navegação para a esquerda */
 }
 
 .logo {
@@ -55,27 +47,27 @@ header {
 .nav-sections li a {
   color: white;
   text-decoration: none;
-  font-size: 20px; /* Ajustado para tamanho menor */
+  font-size: 20px;
 }
 
-/* Alterações no botão CV para movê-lo para a esquerda */
+/* Ajustes no botão CV */
 .cv-button {
   display: inline-block;
   background-color: #ffffff;
   color: #000000;
-  padding: 10px 20px;
+  padding: 4px 10px;
   font-size: 1rem;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  margin-left: 0; /* Retira o espaço à esquerda */
-  margin-right: auto; /* Move o botão para a esquerda */
+  margin-left: 20px; /* Afastando o botão da bandeira */
 }
 
+/* Efeito de hover com zoom */
 .cv-button:hover {
   background-color: #005ec2;
   color: #ffffff;
-  transform: scale(1.05);
+  transform: scale(1.1); /* Adiciona um leve zoom */
 }
 
 /* Imagem de recepção */
@@ -171,7 +163,6 @@ header {
 .bio-tagjavascript { background-color: #eab308; }
 .bio-taggithub { background-color: #000000; }
 
-
 /* Botão de Baixar CV */
 .download-cv .cv-button2 {
   background-color: #007AFF;
@@ -197,14 +188,15 @@ header {
 }
 
 .portfolio-title {
-  font-size: 3.5rem;
+  font-size: 4.0rem;
   color: #ffffff;
 }
 
 .portfolio-description {
+  font-size: 1.2rem;
   margin-bottom: 20px;
+  color: #ffffff; /* Deixa o texto branco */
 }
-
 .portfolio-grid {
   display: flex;
   flex-wrap: wrap;
@@ -243,47 +235,166 @@ header {
   color: #ffffff;
 }
 
-.portfolio-tagcss { background-color: #1e40af; } /* Azul mais escuro */
+.portfolio-tagcss { background-color: #003cff; } /* Azul mais escuro */
 .portfolio-tagui { background-color: #374151; } /* Cinza escuro */
-.portfolio-taghtml { background-color: #fb923c; } /* Laranja mais claro */
-.portfolio-tagjavascript { background-color: #facc15; } /* Amarelo mais claro */
+.portfolio-taghtml { background-color: #f97316; } /* Laranja mais claro */
+.portfolio-tagjavascript { background-color: #eab308; } /* Amarelo mais claro */
 .portfolio-taggithub { background-color: #000000; }
 
 /* Seção de Certificados */
-#certificados {
-  padding: 40px 20px;
+.certificados-section {
+  padding: 60px 20px;
+  background-color: #ffffff;
   text-align: center;
 }
 
-.projects-title {
-  font-size: 2.5rem;
+.section-title {
+  font-size: 4.0rem;
   color: #007AFF;
 }
 
-.portfolio-description {
+.section-description {
+  font-size: 1.2rem;
+  color: #555;
   margin-bottom: 20px;
-  color: #ffffff; /* Deixa o texto branco */
 }
 
-.projects-grid {
+.certificado-card p {
+  text-align: center;  /* Centraliza o texto */
+  color: #ffffff;      /* Define a cor do texto para branco */
+  font-size: 1.0rem;   /* Ajusta o tamanho da fonte se necessário */
+}
+
+/* Layout dos Certificados */
+.certificados-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 5px;
   justify-content: center;
 }
 
-.projeto {
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  text-align: left;
-  max-width: 350px;
+.certificados-grid img {
+  width: 100%;
 }
 
-.projeto img {
-  width: 100%;
+.certificado-card {
+  background-color: #007AFF;
+  padding: 15px;
   border-radius: 10px;
+  text-align: left;
+  max-width: 200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Alinha o conteúdo de cima para baixo */
+  justify-content: space-between; /* Garante que o conteúdo ocupe o máximo de espaço disponível */
+}
+
+.certificado-title {
+  font-size: 1.0rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+/* Botão de Certificado */
+.certificado-button {
+  background-color: #ffffff;
+  color: #005ec2;
+  padding: 1px 6px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-top: 10px; /* Isso vai empurrar o botão para a parte inferior do cartão */
+  align-self: flex-end; /* Isso vai garantir que o botão fique alinhado à direita */
+  font-size: 0.7rem; /* Reduz o tamanho da fonte do botão */
+}
+
+.certificado-button:hover {
+  background-color: #005ec2;
+  color: #ffffff;
+}
+
+/* Sessão de chamada para ação */
+.cta-section {
+  background-color: #05070a;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.cta-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  line-height: 1.0; /* Ajuste o valor conforme necessário */
+  margin-top: 100px;
+  }
+
+/* Botão  de CTA*/
+.cta-button {
+  background-color: #007BFF;
+  color: #ffffff;
+  padding: 5px 30px;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 35px;
+  transition: background-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 100px; /* Aumente esse valor conforme necessário */
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+.seta {
+  font-size: 1.5rem;
+  transform: rotate(-45deg); /* Roda a seta na diagonal */
+  font-weight: bold; /* Torna a seta mais grossa */
+}
+ /* Rodapé */
+ footer {
+  padding: 4px;
+  background-color: #05070a;
+  color: white;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px; /* Ajuste o padding se necessário */
+}
+
+.social-links a {
+  margin-left: 0; /* Remove a margem esquerda */
+  margin-right: 10px; /* Adiciona um pequeno espaço à direita */
+}
+
+.social-links {
+  display: flex;
+  gap: 10px; /* Controla o espaçamento entre os links */
+}
+
+.social-links img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+  object-fit: contain;
+}
+
+.social-links img:hover {
+  transform: scale(1.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .certificados-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 /* Responsividade */
@@ -307,29 +418,4 @@ header {
   }
   
   .logo { max-height: 40px; }
-}
-
-/* Responsividade para dispositivos móveis */
-@media (max-width: 768px) {
-  header {
-    padding: 10px 20px;
-    flex-direction: column; /* Coloca logo em cima */
-    align-items: center; /* Centraliza os itens */
-  }
-
-  .nav-sections {
-    display: none; /* Oculta as seções de navegação em dispositivos móveis */
-  }
-
-  .logo {
-    max-height: 50px; /* Ajuste a altura da logo */
-    margin-bottom: 10px; /* Espaço abaixo da logo */
-  }
-}
-
-/* Ajustes para tamanhos menores */
-@media (max-width: 480px) {
-  .logo {
-    max-height: 40px; /* Tamanho ainda menor para dispositivos muito pequenos */
-  }
 }

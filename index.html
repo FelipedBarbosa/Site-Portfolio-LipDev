@@ -6,6 +6,8 @@
     <link rel="shortcut icon" href="Imagens/favicon.png" type="image/x-icon" />
     <title>Lipe Dev</title>
     <link rel="stylesheet" href="index.css" />
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   </head>
   <body>
     <!-- Cabeçalho -->
@@ -20,22 +22,9 @@
       <div class="logo-container">
         <img src="Imagens/logo_lipedev.png" alt="Logo do Lipe Dev" class="logo" />
       </div>
-      <a href="seu-cv.pdf" class="cv-button" download>BAIXAR CV</a> <!-- Mover o botão aqui -->
+      <a href="seu-cv.pdf" class="cv-button" download>BAIXAR CV</a> <!-- Mover o botão aqui -->    
     </header>
     
-    <style>
-      .seta {
-          font-size: 30px;
-          color: #333;
-      }
-      .seta-esquerda {
-          transform: rotate(180deg);
-      }
-      .seta-direita {
-          transform: rotate(0deg);
-      }
-  </style>
-
     <!-- Imagem de recepção -->
     <section id="recepcao">
       <img src="Imagens/banner_transformando.png" alt="Transformando códigos em soluções" />
@@ -110,22 +99,56 @@
       </section>
 
       <!-- Área de Certificados -->
-      <section id="certificados">
-        <h2 class="projects-title">Certificados</h2>
-        <p class="projects-description">
-          Aqui estão alguns dos meus certificados mais significativos.
-        </p>
-        <div class="projects-grid">
-          <article class="projeto">
-            <img src="site.png" alt="Certificado de meu site - Portfólio" />
-            <h3>Certificado de Desenvolvimento Web</h3>
-            <p>
-              Este certificado demonstra minhas habilidades em desenvolvimento
-              front-end e design de interfaces.
-            </p>
-          </article>
-        </div>
-      </section>
+        <section id="certificados" class="certificados-section">
+          <h2 class="section-title">Certificados</h2>
+          <p class="section-description">
+            Certificados que refletem minha dedicação em aprimorar habilidades e conhecimentos como desenvolvedor.<br>
+            Cada conquista aqui representa meu compromisso em sempre entregar o melhor!
+          </p>
+          <div class="certificados-grid">
+            <!-- Cartão de Certificado 1 -->
+            <div class="certificado-card">
+              <img src="Imagens/certificado python iniciante.PNG" alt="Certificado de meu site - Portfólio" />
+              <p>Introdução ao Python</p>
+              <a href="Certificados/doc.pdf" target="_blank" class="certificado-button">Ver</a>
+            </div>
+        
+            <!-- Cartão de Certificado 2 -->
+            <div class="certificado-card">
+              <img src="Imagens/certificado html.PNG" alt="Certificado de meu site - Portfólio" />
+              <p>Html e Bootstrap</p>
+              <a href="Certificados/certificado html.pdf" target="_blank" class="certificado-button">Ver</a>
+            </div>
+        
+            <!-- Cartão de Certificado 3 -->
+            <div class="certificado-card">
+              <img src="Imagens/certificado python iniciante.PNG" alt="Certificado de meu site - Portfólio" />
+              <p> introdução a Jquery e javascript</p>
+              <a href="Certificados/certificado javascript.pdf" target="_blank" class="certificado-button">Ver</a>
+            </div>
+          </div>
+        </section>
+        <section class="cta-section">
+          <div class="cta-content">
+            <h1>Transforme suas ideias <br>
+              em realidade!</h1>
+            <a href="https://wa.me/5569984248351" class="cta-button">Enviar uma mensagem <span class="seta">&#8594;</span> </a>
+          </div>
+        </section>
+        <footer>
+          <div class="footer-content">
+            <p>&copy; 2024 Felipe Barbosa. Todos os direitos reservados.</p>
+          <div class="social-links">
+            <a href="https://github.com/FelipedBarbosa" target="_blank">
+              <img src="Imagens/github_imagem.png" alt="GitHub"/>
+            </a>
+            <a href="https://www.linkedin.com/in/felipe-barbosa-1b37b92a0/" target="_blank">
+              <img src="Imagens/linkedin_imagem.png" alt="LinkedIn" />
+            </a>
+          </div></div>
+          
+        </footer>
+        
     </main>
   </body>
 </html>
