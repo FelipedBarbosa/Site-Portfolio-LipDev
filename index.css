@@ -7,7 +7,7 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
+  line-height: 2.0;
   overflow-x: hidden; /* Garante que não haja rolagem horizontal */
 }
 
@@ -28,22 +28,24 @@ header {
 
 .logo-container {
   display: flex;
-  justify-content: center; /* Centraliza a logo */
-  flex: 1; /* Permite que a logo ocupe o espaço */
+  justify-content: center;
+  flex: 1;
+  margin-left: 150px;
 }
 
 .nav-sections {
   list-style: none;
   display: flex;
-  flex-direction: row; /* Mantenha em linha */
-  align-items: center; /* Centraliza verticalmente */
-  gap: 20px; /* Espaçamento entre os itens */
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
 }
 
 .nav-right {
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-left: 20px; /* Move a navegação para a esquerda */
 }
 
 .logo {
@@ -53,15 +55,10 @@ header {
 .nav-sections li a {
   color: white;
   text-decoration: none;
-  font-size: 18px; /* Ajustado para tamanho menor */
+  font-size: 20px; /* Ajustado para tamanho menor */
 }
 
-.cv-button:hover {
-  background-color: #ffffff; /* Altera a cor de fundo */
-  color: #000000; /* Altera a cor do texto */
-  transform: scale(1.05); /* Levemente aumenta o tamanho */
-}
-
+/* Alterações no botão CV para movê-lo para a esquerda */
 .cv-button {
   display: inline-block;
   background-color: #ffffff;
@@ -71,6 +68,14 @@ header {
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-left: 0; /* Retira o espaço à esquerda */
+  margin-right: auto; /* Move o botão para a esquerda */
+}
+
+.cv-button:hover {
+  background-color: #005ec2;
+  color: #ffffff;
+  transform: scale(1.05);
 }
 
 /* Imagem de recepção */
@@ -89,7 +94,7 @@ header {
 /* Seção "Sobre Mim" */
 #bio {
   padding: 10px 10px;
-  background-color: hsl(189, 100%, 97%);
+  background-color: hsl(0, 0%, 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -124,7 +129,7 @@ header {
 .bio-text p {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #333;
+  color: #383838;
 }
 
 /* Imagem */
@@ -142,39 +147,166 @@ header {
   max-height: 500px;
 }
 
-/* Tags */
-.tags {
-  margin-top: 20px;
+/* Estilos para as tags da seção Bio */
+.bio-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-.tagcss, .tagui, .taghtmlegit, .tagjavascript {
+.bio-tag {
   display: inline-block;
-  color: #fff;
-  padding: 5px 10px;
+  padding: 5px 15px;
   border-radius: 15px;
-  margin-right: 10px;
   font-size: 0.9rem;
   text-transform: capitalize;
+  color: #ffffff;
 }
 
-.tagcss {
-  background-color: rgb(0, 60, 255);
+.bio-tagcss { background-color: #003cff; }
+.bio-tagui { background-color: #374151; }
+.bio-taghtml { background-color: #f97316; }
+.bio-tagjavascript { background-color: #eab308; }
+.bio-taggithub { background-color: #000000; }
+
+
+/* Botão de Baixar CV */
+.download-cv .cv-button2 {
+  background-color: #007AFF;
+  color: white;
+  padding: 12px 190px; /* Aumenta o tamanho do botão (largura e altura) */
+  border-radius: 5px;
+  text-decoration: none;
+  transition: transform 0.3s, background-color 0.3s;
+  margin-top: 40px; /* Afasta o botão do texto acima */
 }
 
-.tagui {
-  background-color: rgb(0, 0, 0);
+.cv-button2:hover {
+  background-color: #005ec2;
+  color: #ffffff;
+  transform: scale(1.05);
 }
 
-.taghtmlegit {
-  background-color: rgb(249, 115, 22);
+/* Seção de Projetos */
+#portfolio {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #007AFF;
 }
 
-.tagjavascript {
-  background-color: rgb(234, 179, 8);
+.portfolio-title {
+  font-size: 3.5rem;
+  color: #ffffff;
 }
 
-.tag:hover {
-  background-color: #80e3ff;
+.portfolio-description {
+  margin-bottom: 20px;
+}
+
+.portfolio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.portfolio {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  max-width: 350px;
+}
+
+.portfolio img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Estilos para as tags da seção Portfolio */
+.portfolio-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 0px;
+}
+
+.portfolio-tag {
+  display: inline-block;
+  padding: 1px 15px;
+  border-radius: 15px;
+  font-size: 0.7rem;
+  text-transform: capitalize;
+  color: #ffffff;
+}
+
+.portfolio-tagcss { background-color: #1e40af; } /* Azul mais escuro */
+.portfolio-tagui { background-color: #374151; } /* Cinza escuro */
+.portfolio-taghtml { background-color: #fb923c; } /* Laranja mais claro */
+.portfolio-tagjavascript { background-color: #facc15; } /* Amarelo mais claro */
+.portfolio-taggithub { background-color: #000000; }
+
+/* Seção de Certificados */
+#certificados {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.projects-title {
+  font-size: 2.5rem;
+  color: #007AFF;
+}
+
+.portfolio-description {
+  margin-bottom: 20px;
+  color: #ffffff; /* Deixa o texto branco */
+}
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.projeto {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  max-width: 350px;
+}
+
+.projeto img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .nav-sections {
+    display: none;
+  }
+
+  .logo { max-height: 50px; }
+}
+
+@media (max-width: 480px) {
+  .container {
+    flex-direction: column;
+  }
+  
+  .logo { max-height: 40px; }
 }
 
 /* Responsividade para dispositivos móveis */

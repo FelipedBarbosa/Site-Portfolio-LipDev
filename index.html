@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="Imagens/favicon.png" type="image/x-icon" />
     <title>Lipe Dev</title>
     <link rel="stylesheet" href="index.css" />
   </head>
@@ -18,11 +18,9 @@
         </ul>
       </nav>
       <div class="logo-container">
-        <img src="Logo.png" alt="Logo do Lipe Dev" class="logo" />
+        <img src="Imagens/logo_lipedev.png" alt="Logo do Lipe Dev" class="logo" />
       </div>
-      <div class="nav-right">
-        <a href="seu-cv.pdf" class="cv-button" download>BAIXAR CV</a>
-      </div>
+      <a href="seu-cv.pdf" class="cv-button" download>BAIXAR CV</a> <!-- Mover o botão aqui -->
     </header>
 
     <div class="arrow-container">
@@ -33,7 +31,7 @@
 
     <!-- Imagem de recepção -->
     <section id="recepcao">
-      <img src="Banner_1.png" alt="Transformando códigos em soluções" />
+      <img src="Imagens/banner_transformando.png" alt="Transformando códigos em soluções" />
     </section>
 
     <main>
@@ -42,7 +40,7 @@
         <div class="container">
           <div class="bio-image">
             <img
-              src="Imagem_Bio.jpeg"
+              src="Imagens/foto_bio.jpeg"
               loading="lazy"
               alt="Foto de Felipe Barbosa"
               class="bio-img"
@@ -56,17 +54,19 @@
               de alta qualidade em experiências visuais intuitivas e
               envolventes, utilizando:
             </p>
-            <div class="tags">
-              <span class="tagcss">CSS</span>
-              <span class="tagui">UI</span>
-              <span class="taghtmlegit">HTML</span>
-              <span class="tagjavascript">JavaScript</span>
-            </div>
+            <div class="bio-tags">
+              <span class="bio-tag bio-tagcss">CSS</span>
+              <span class="bio-tag bio-tagui">UI</span>
+              <span class="bio-tag bio-taghtml">HTML</span>
+              <span class="bio-tag bio-tagjavascript">JavaScript</span>
+              <span class="bio-tag bio-taggithub">GitHub</span>
+            </div>            
             <p>
               Estou animado para colaborar em projetos desafiadores e continuar
               a evoluir minhas habilidades na criação de interfaces de usuário
               envolventes e eficazes.
             </p>
+            <br>
             <div class="download-cv">
               <a href="seu-cv.pdf" class="cv-button2" download>Baixar CV</a>
             </div>
@@ -76,20 +76,21 @@
 
       <!-- Seção de Meus Projetos -->
       <section id="portfolio">
-        <h2 class="portfolio-title">Portfolio</h2>
+        <h1 class="portfolio-title">Portfolio</h1>
         <p class="portfolio-description">
           Aqui estão alguns dos meus projetos mais significativos, que mostram
           minhas habilidades e criatividade.
         </p>
         <div class="portfolio-grid">
           <article class="portfolio">
-            <img src="site.png" alt="Meu Site - Portfólio" />
-            <div class="tags">
-              <span class="taghtml">HTML</span>
-              <span class="tagjavascript">JavaScript</span>
-              <span class="tagcss">CSS</span>
-              <span class="tagui">UI</span>
-            </div>
+            <img src="Imagens/print_portifolio.PNG" alt="Meu Site - Portfólio" />
+            <div class="portfolio-tags">
+              <span class="portfolio-tag portfolio-taghtml">HTML</span>
+              <span class="portfolio-tag portfolio-tagjavascript">JavaScript</span>
+              <span class="portfolio-tag portfolio-tagcss">CSS</span>
+              <span class="portfolio-tag portfolio-tagui">UI</span>
+              <span class="portfolio-tag portfolio-taggithub">GitHub</span>
+            </div>                       
             <h3>(Meu Site) - Portfólio</h3>
             <p>
               Este site é um dos meus principais projetos, desenvolvido para
@@ -123,8 +124,3 @@
 </html>
 
 
-
-echo "# Site-Portfolio-LipeDev" >> README.md git init git add README.md git
-commit -m "primeiro commit" git branch -M main git remote add origin
-https://github.com/FelipedBarbosa/Site-Portfolio-LipeDev.git git push -u origin
-main
