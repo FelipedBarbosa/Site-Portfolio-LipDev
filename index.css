@@ -31,7 +31,7 @@ header {
   display: flex;
   justify-content: center;
   flex: 1;
-  margin-right: 20px;
+  margin-right: 30px;
 }
 
 .nav-sections {
@@ -41,7 +41,9 @@ header {
 }
 
 .logo {
-  max-height: 70px;
+  max-width: 350px; /* Ajuste conforme necessário */
+  height: auto;
+  margin: 0 auto;
 }
 
 .nav-sections li a {
@@ -60,8 +62,10 @@ header {
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  margin-left: 20px; /* Afastando o botão da bandeira */
+  margin-left: 20px; /* Afastando o botão da logo */
+  margin-top: 15px; /* Afastando o botão para baixo */
 }
+
 
 /* Efeito de hover com zoom */
 .cv-button:hover {
@@ -168,7 +172,7 @@ header {
 .download-cv .cv-button2 {
   background-color: #007AFF;
   color: white;
-  padding: 12px 190px; /* Aumenta o tamanho do botão (largura e altura) */
+  padding: 10px 100px; /* Aumenta o tamanho do botão (largura e altura) */
   border-radius: 5px;
   text-decoration: none;
   transition: transform 0.3s, background-color 0.3s;
@@ -242,77 +246,137 @@ header {
 .portfolio-tagjavascript { background-color: #eab308; } /* Amarelo mais claro */
 .portfolio-taggithub { background-color: #000000; }
 
-/* Seção de Certificados */
+/* Sessão de Certificados */
 .certificados-section {
-  padding: 60px 20px;
-  background-color: #ffffff;
+  padding: 20px 40px;
   text-align: center;
+  padding: 50px 0;
+  position: relative; /* Adiciona o contexto para o z-index */
+  z-index: 1; /* Garante que o conteúdo da seção fique abaixo dos botões */
 }
 
 .section-title {
   font-size: 4.0rem;
+  margin-bottom: 20px;
   color: #007AFF;
 }
 
 .section-description {
   font-size: 1.2rem;
+  margin-bottom: 20px;
   color: #555;
+  text-align: center;
+}
+
+.carousel-container {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.certificado-grid {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Espaço entre os certificados */
+  flex-wrap: wrap;
+}
+
+.certificado-card {
+  background-color: #007BFF; /* Cor de fundo azul */
+  padding: 24px;
+  border-radius: 10px;
+  text-align: left;
+  width: 100%;
+  max-width: 350px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.certificado-card img {
+  max-width: 100%;
+  height: auto;
   margin-bottom: 20px;
 }
 
 .certificado-card p {
-  text-align: center;  /* Centraliza o texto */
-  color: #ffffff;      /* Define a cor do texto para branco */
-  font-size: 1.0rem;   /* Ajusta o tamanho da fonte se necessário */
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: white; /* Cor do texto no fundo azul */
 }
 
-/* Layout dos Certificados */
-.certificados-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  justify-content: center;
-}
-
-.certificados-grid img {
-  width: 100%;
-}
-
-.certificado-card {
-  background-color: #007AFF;
-  padding: 15px;
-  border-radius: 10px;
-  text-align: left;
-  max-width: 200px;
-  width: 100%;
-  display: flex;
-  flex-direction: column; /* Alinha o conteúdo de cima para baixo */
-  justify-content: space-between; /* Garante que o conteúdo ocupe o máximo de espaço disponível */
-}
-
-.certificado-title {
-  font-size: 1.0rem;
-  color: #ffffff;
-  margin-bottom: 10px;
-}
-
-/* Botão de Certificado */
 .certificado-button {
-  background-color: #ffffff;
-  color: #005ec2;
-  padding: 1px 6px;
-  border-radius: 5px;
+  display: inline-block;
+  padding: 3px 10px;
+  background-color: white;
+  color: #007BFF;
   text-decoration: none;
-  transition: background-color 0.3s ease;
-  margin-top: 10px; /* Isso vai empurrar o botão para a parte inferior do cartão */
-  align-self: flex-end; /* Isso vai garantir que o botão fique alinhado à direita */
-  font-size: 0.7rem; /* Reduz o tamanho da fonte do botão */
+  border-radius: 5px;
+  font-size: 0.85rem;
+  margin-top: 10px;
+  text-align: center;
+  box-sizing: border-box;
+  margin-left: auto; /* Isso move o botão para a direita */
 }
 
 .certificado-button:hover {
-  background-color: #005ec2;
-  color: #ffffff;
+  background-color: #ffffff;
 }
+
+.certificado-button {
+  max-width: 40px; /* Controla o tamanho máximo do botão */
+  content: right;
+
+}
+
+/* Carrossel com z-index */
+.carousel-container {
+  position: relative;
+  z-index: 1; /* Carrossel com z-index baixo */
+  overflow: hidden;
+}
+
+/* Botões de navegação com z-index */
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  color: #007bff;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 12px 20px;
+  border-radius: 50%;
+  z-index: 100; /* Garante que os botões fiquem na frente de qualquer outro conteúdo */
+}
+
+button:hover {
+  background-color: #ffffff;
+  transform: translateY(-50%) scale(1.1);
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Posicionamento dos botões */
+.prev {
+  left: 10px;  /* Ajuste a posição para que o botão anterior não fique cortado */
+}
+
+.next {
+  right: 10px;  /* Ajuste a posição para que o botão próximo não fique cortado */
+}
+
 
 /* Sessão de chamada para ação */
 .cta-section {
@@ -390,27 +454,125 @@ header {
   transform: scale(1.1);
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-  .certificados-grid {
-    flex-direction: column;
-    gap: 20px;
-  }
+/* Estilos para o botão hamburger */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
+  /* Cabeçalho Responsivo */
   header {
-    flex-direction: column;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #007AFF;
+    z-index: 1000;
+    padding: 1px 20px; /* Ajustei o padding para ser mais compacto */
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    padding: 10px 20px;
+    justify-content: space-between;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 30px;
+    min-height: 60px; /* Defini a altura mínima do cabeçalho */
   }
 
+  /* Esconder todos os outros elementos, exceto a logo */
+  .nav-sections,
+  .menu-toggle,
+  .cv-download-container {
+    display: none;  
+  }
+
+  /* Ajustar a logo para o centro (se necessário) */
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Aumentar o tamanho da logo no celular */
+  .logo {
+    max-width: 550px; /* Aumente conforme necessário */
+    height: auto;
+  }
+
+  /* Ajustar o contêiner para uma direção coluna */
+  .container {
+    flex-direction: column;
+  }
+
+  /* Esconder a barra de navegação e outros botões */
   .nav-sections {
     display: none;
   }
 
-  .logo { max-height: 50px; }
+  /* Seção de Certificados */
+  .certificados-section {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 3.5rem;
+    color: #007AFF;
+  }
+
+  .section-description {
+    font-size: 1.0rem;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .certificados-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .certificado-card {
+    flex: 0 0 100%; /* Exibe 1 certificado por vez em telas menores */
+    max-width: 350px;
+    background-color: #007BFF;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin: 10px 0;
+    box-sizing: border-box;
+  }
+
+  .certificado-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .certificado-button {
+    padding: 1px 10px;
+    font-size: 1rem;
+    margin-top: 8px;
+    display: inline-block;
+    background-color: white;
+    color: #007BFF;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+  }
+
+  .certificado-button:hover {
+    background-color: #0056b3;
+  }
 }
 
 @media (max-width: 480px) {

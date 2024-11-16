@@ -13,6 +13,7 @@
     <!-- Cabeçalho -->
     <header>
       <nav>
+        <button class="menu-toggle" id="menu-toggle">☰</button>
         <ul class="nav-sections">
           <li><a href="#bio">Bio</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
@@ -20,10 +21,13 @@
         </ul>
       </nav>
       <div class="logo-container">
-        <img src="Imagens/logo_lipedev.png" alt="Logo do Lipe Dev" class="logo" />
+        <img src="Imagens/logo_lipedev.png" alt="Logo do Lipe Dev" class="logo" 
       </div>
-      <a href="Curículo Felipe.pdf" class="cv-button" download>BAIXAR CV</a> <!-- Mover o botão aqui -->    
+      <div class="cv-download-container">
+        <a href="Curículo Felipe.pdf" class="cv-button" download>BAIXAR CV</a>
+      </div>
     </header>
+    
     
     <!-- Imagem de recepção -->
     <section id="recepcao">
@@ -100,36 +104,42 @@
         </div>
       </section>
 
-      <!-- Área de Certificados -->
-        <section id="certificados" class="certificados-section">
-          <h2 class="section-title">Certificados</h2>
-          <p class="section-description">
-            Certificados que refletem minha dedicação em aprimorar habilidades e conhecimentos como desenvolvedor.<br>
-            Cada conquista aqui representa meu compromisso em sempre entregar o melhor!
-          </p>
-          <div class="certificados-grid">
-            <!-- Cartão de Certificado 1 -->
-            <div class="certificado-card">
-              <img src="Imagens/certificado python iniciante.PNG" alt="Certificado de meu site - Portfólio" />
-              <p>Introdução ao Python</p>
-              <a href="Certificados/doc.pdf" target="_blank" class="certificado-button">Ver</a>
-            </div>
-        
-            <!-- Cartão de Certificado 2 -->
-            <div class="certificado-card">
-              <img src="Imagens/certificado html.PNG" alt="Certificado de meu site - Portfólio" />
-              <p>Html e Bootstrap</p>
-              <a href="Certificados/certificado html.pdf" target="_blank" class="certificado-button">Ver</a>
-            </div>
-        
-            <!-- Cartão de Certificado 3 -->
-            <div class="certificado-card">
-              <img src="Imagens/certificado python iniciante.PNG" alt="Certificado de meu site - Portfólio" />
-              <p> introdução a Jquery e javascript</p>
-              <a href="Certificados/certificado javascript.pdf" target="_blank" class="certificado-button">Ver</a>
-            </div>
+     <!-- Área de Certificados -->
+     <section id="certificados" class="certificados-section">
+      <h2 class="section-title">Certificados</h2>
+      <p class="section-description">
+        Certificados que refletem minha dedicação em aprimorar habilidades e conhecimentos como desenvolvedor.<br>
+        Cada conquista aqui representa meu compromisso em sempre entregar o melhor!
+      </p>
+    
+      <div class="carousel-container">
+        <div class="carousel">
+          <!-- Cartão de Certificado 1 -->
+          <div class="certificado-card">
+            <img src="Imagens/certificado python iniciante.PNG" alt="Certificado de Python" />
+            <p>Introdução ao Python</p>
+            <a href="Certificados/certificado python.pdf" target="_blank" class="certificado-button">Ver</a>
           </div>
-        </section>
+    
+          <!-- Cartão de Certificado 2 -->
+          <div class="certificado-card">
+            <img src="Imagens/certificado html.PNG" alt="Certificado de HTML" />
+            <p>HTML e Bootstrap</p>
+            <a href="Certificados/certificado html.pdf" target="_blank" class="certificado-button">Ver</a>
+          </div>
+    
+          <!-- Cartão de Certificado 3 -->
+          <div class="certificado-card">
+            <img src="Imagens/certificado javascript.PNG" alt="Certificado de Javascript" />
+            <p>Introdução a JavaScript</p>
+            <a href="Certificados/certificado javascript.pdf" target="_blank" class="certificado-button">Ver</a>
+          </div>
+        </div>
+        <!-- Botões de Navegação -->
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div>
+    </section>
         <section class="cta-section">
           <div class="cta-content">
             <h1>Transforme suas ideias <br>
@@ -150,7 +160,7 @@
           </div></div>
           
         </footer>
-        
+        <script src="index.js"></script>
     </main>
   </body>
 </html>
