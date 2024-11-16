@@ -1,19 +1,36 @@
-document.getElementById('menu-toggle').addEventListener('click', function() {
-    const navSections = document.querySelector('.nav-sections');
-    navSections.classList.toggle('active');
-  });
+// Controle do Menu Mobile
+const menuToggle = document.getElementById('menu-toggle');
+const navSections = document.querySelector('.nav-sections');
 
-// Código de navegação do carrossel
+// Função para alternar o menu
+menuToggle.addEventListener('click', function () {
+  navSections.classList.toggle('active');
+});
+
+// Fechar o menu quando se clica fora dele
+document.addEventListener('click', function (e) {
+  if (!menuToggle.contains(e.target) && !navSections.contains(e.target)) {
+    navSections.classList.remove('active');
+  }
+});
+
+// Fechar o menu ao clicar em um link
+navSections.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navSections.classList.remove('active');
+  });
+});
+
+// Carrossel de Certificados
 const prevButton = document.querySelector('.prev');
 const nextButton = document.querySelector('.next');
 const carousel = document.querySelector('.carousel');
+const totalItems = document.querySelectorAll('.certificado-card').length;
 let currentIndex = 0;
 
-const totalItems = document.querySelectorAll('.certificado-card').length;
-
 function updateCarousel() {
-  const offset = -currentIndex * 100; // Desloca a lista de certificados
-  carousel.style.transform = `translateX(${offset}%)`;
+  const offset = -currentIndex * carousel.offsetWidth; // Deslocamento baseado na largura do contêiner
+  carousel.style.transform = `translateX(${offset}px)`;
 }
 
 // Navegar para o próximo item
@@ -36,3 +53,5 @@ prevButton.addEventListener('click', () => {
   updateCarousel();
 });
 
+// Ajustar o carrossel ao redimensionar a janela
+window.addEventListener('resize', updateCarousel);

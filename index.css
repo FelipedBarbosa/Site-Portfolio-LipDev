@@ -377,6 +377,25 @@ button:focus {
   right: 10px;  /* Ajuste a posição para que o botão próximo não fique cortado */
 }
 
+ /* Rodapé */
+ footer {
+  padding: 4px;
+  background-color: #05070a;
+  color: white;
+}
+
+.seta {
+  font-size: 1.rem;
+  transform: rotate(-45deg); /* Roda a seta na diagonal */
+  font-weight: bold; /* Torna a seta mais grossa */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px; /* Ajuste o padding se necessário */
+}
 
 /* Sessão de chamada para ação */
 .cta-section {
@@ -412,25 +431,6 @@ button:focus {
 .cta-button:hover {
   background-color: #0056b3;
   color: white;
-}
-
-.seta {
-  font-size: 1.5rem;
-  transform: rotate(-45deg); /* Roda a seta na diagonal */
-  font-weight: bold; /* Torna a seta mais grossa */
-}
- /* Rodapé */
- footer {
-  padding: 4px;
-  background-color: #05070a;
-  color: white;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px; /* Ajuste o padding se necessário */
 }
 
 .social-links a {
@@ -581,4 +581,33 @@ button:focus {
   }
   
   .logo { max-height: 40px; }
+
+  .bio-text h1 {
+    line-height: 1.0;
+    letter-spacing: 2px;
+  }
+
+  .download-cv .cv-button2 {
+    padding: 13px 65px; /* Ainda menor em dispositivos muito pequenos */
+    font-size: 1.0rem;
+  }
+
+  .section-title {
+    font-size: 3.0rem;
+    color: #007AFF;
+  }
+
+  .cta-content h1 {
+    font-size: 2.6rem; /* Tamanho ainda menor para telas muito pequenas */
+  }
+
+  .cta-button {
+    padding: 10px 20px;  /* Reduz o padding em telas pequenas */
+    font-size: 1.2rem;     /* Reduz ainda mais o tamanho da fonte */
+  }
+
+  .prev, .next {
+    font-size: 1.2rem;  /* Reduz ainda mais o tamanho das setas para telas pequenas */
+  }
 }
+
