@@ -202,11 +202,14 @@ header {
   margin-bottom: 20px;
   color: #ffffff; /* Deixa o texto branco */
 }
+
 .portfolio-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: center;
+  justify-content: center; /* Centraliza os projetos */
+  max-width: 800px; /* Limita a largura máxima */
+  margin: 0 auto; /* Centraliza o grid */
 }
 
 .portfolio {
