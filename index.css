@@ -16,61 +16,67 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #007AFF;
+  background-color: #000000;
   z-index: 1000;
-  padding: 1px 150px;
+  padding: 10px 110px;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  gap: 30px;
+  height: 70px; /* Define uma altura fixa para o cabeçalho */
 }
 
 .logo-container {
   display: flex;
-  justify-content: center;
-  flex: 1;
-  margin-right: 30px;
+  justify-content: flex-start; /* Alinha a logo à esquerda */
+  flex: 0; /* Evita que ela cresça mais do que necessário */
+  margin-left: -100px; /* Remove espaçamento extra */
 }
 
 .nav-sections {
   list-style: none;
   display: flex;
+  justify-content: center; /* Centraliza os itens */
+  flex-grow: 1; /* Faz com que ocupe o espaço necessário */
   gap: 20px;
 }
 
 .logo {
-  max-width: 350px; /* Ajuste conforme necessário */
-  height: auto;
-  margin: 0 auto;
+  max-width: 300px; /* Define o tamanho desejado */
+  height: auto; /* Mantém a proporção correta */
 }
 
 .nav-sections li a {
   color: white;
   text-decoration: none;
   font-size: 20px;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* Suaviza transições */
+}
+
+/* Efeito de zoom ao passar o mouse em cada link individualmente */
+.nav-sections li a:hover {
+  transform: scale(1.1); /* Aumenta ligeiramente o tamanho */
+  color: #007AFF; /* Escurece um pouco ao passar o mouse */
 }
 
 /* Ajustes no botão CV */
 .cv-button {
   display: inline-block;
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #007AFF;
+  color: #ffffff;
   padding: 4px 10px;
   font-size: 1rem;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease, transform 0.3s ease;
   margin-left: 20px; /* Afastando o botão da logo */
-  margin-top: 15px; /* Afastando o botão para baixo */
 }
 
 
 /* Efeito de hover com zoom */
 .cv-button:hover {
-  background-color: #005ec2;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #007AFF;
   transform: scale(1.1); /* Adiciona um leve zoom */
 }
 
@@ -85,12 +91,14 @@ header {
 #recepcao img {
   width: 100%; /* A imagem ocupa 100% da largura do contêiner */
   height: auto; /* Mantém a proporção da imagem */
+  display: block;
+  margin-bottom: 0;
 }
 
 /* Seção "Sobre Mim" */
 #bio {
   padding: 10px 10px;
-  background-color: hsl(0, 0%, 100%);
+  background-color: hsl(0, 0%, 0%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -125,7 +133,7 @@ header {
 .bio-text p {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #383838;
+  color: #ffffff;
 }
 
 /* Imagem */
@@ -161,28 +169,53 @@ header {
   color: #ffffff;
 }
 
-.bio-tagcss { background-color: #003cff; }
-.bio-tagui { background-color: #374151; }
+.bio-tagcss { background-color: #0025a0; }
+.bio-tagui { background-color: #9a37c9; }
 .bio-taghtml { background-color: #f97316; }
 .bio-tagjavascript { background-color: #eab308; }
 .bio-tagpython { background-color: #65c1ff; }
-.bio-taggithub { background-color: #000000; }
+.bio-taggithub { background-color: #474747; }
 
-/* Botão de Baixar CV */
-.download-cv .cv-button2 {
+/* Container para os botões */
+.download-container {
+  display: flex; /* Coloca os botões lado a lado */
+  gap: 35px; /* Espaçamento entre os botões */
+  justify-content: center; /* Centraliza os botões */
+  flex-wrap: wrap; /* Permite que quebrem de linha em telas pequenas */
+}
+
+/* Estilo do botão Baixar CV */
+.cv-button2 {
+  display: inline-block;
   background-color: #007AFF;
   color: white;
-  padding: 10px 100px; /* Aumenta o tamanho do botão (largura e altura) */
+  padding: 10px 70px;
   border-radius: 5px;
   text-decoration: none;
-  transition: transform 0.3s, background-color 0.3s;
-  margin-top: 40px; /* Afasta o botão do texto acima */
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .cv-button2:hover {
-  background-color: #005ec2;
+  background-color: #ffffff;
+  color: #007AFF;
+  transform: scale(1.1);
+}
+
+/* Estilo do botão Entre em Contato */
+.entre-contato {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #007AFF;
+  padding: 10px 45px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.entre-contato:hover {
+  background-color: #007AFF;
   color: #ffffff;
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 /* Seção de Projetos */
@@ -251,23 +284,23 @@ header {
 
 /* Sessão de Certificados */
 .certificados-section {
-  padding: 20px 40px;
+  padding: 10px 0px;
   text-align: center;
-  padding: 50px 0;
   position: relative; /* Adiciona o contexto para o z-index */
   z-index: 1; /* Garante que o conteúdo da seção fique abaixo dos botões */
+  background-color: #ffffff;
 }
 
 .section-title {
   font-size: 4.0rem;
-  margin-bottom: 20px;
+  margin-bottom: -10px;
   color: #007AFF;
 }
 
 .section-description {
   font-size: 1.2rem;
   margin-bottom: 20px;
-  color: #555;
+  color: #4d4d4d;
   text-align: center;
 }
 
@@ -292,28 +325,27 @@ header {
 
 .certificado-card {
   background-color: #007BFF; /* Cor de fundo azul */
-  padding: 24px;
+  padding: 10px 10px;
   border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: left;
-  width: 100%;
-  max-width: 350px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: 10px;
+  max-width: 200px;
+  flex: 0 0 auto;
+  margin: 65px;
 }
 
+/* Ajuste da imagem */
 .certificado-card img {
   max-width: 100%;
   height: auto;
-  margin-bottom: 20px;
 }
 
 .certificado-card p {
-  font-size: 1.2rem;
-  margin: 10px 0;
+  font-size: 1.4rem;
+  margin: -5px 1px;
+  text-align: left;
   color: white; /* Cor do texto no fundo azul */
+  line-height: 30px;
 }
 
 .certificado-button {
@@ -324,10 +356,11 @@ header {
   text-decoration: none;
   border-radius: 5px;
   font-size: 0.85rem;
-  margin-top: 10px;
-  text-align: center;
+  margin-bottom: -20px;
+  text-align: right;
   box-sizing: border-box;
-  margin-left: auto; /* Isso move o botão para a direita */
+  margin-left: 140px; /* Isso move o botão para a direita */
+  
 }
 
 .certificado-button:hover {
@@ -347,24 +380,42 @@ header {
   overflow: hidden;
 }
 
-/* Botões de navegação com z-index */
+/* Botões de Serviços */
+.prev-servicos {
+  left: 10px;
+}
+
+.next-servicos {
+  right: 10px;
+}
+
+/* Botões de Certificados */
+.prev-certificados {
+  left: 10px;
+}
+
+.next-certificados {
+  right: 10px;
+}
+
+/* Certificar que os botões de navegação aparecem */
 button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: white;
-  color: #007bff;
+  background-color: rgba(0, 0, 0, 0);
+  color: #000000;
   border: none;
   font-size: 2rem;
   cursor: pointer;
-  padding: 12px 20px;
+  padding: 9px;
   border-radius: 50%;
-  z-index: 100; /* Garante que os botões fiquem na frente de qualquer outro conteúdo */
+  z-index: 10;
 }
 
+/* Efeito ao passar o mouse */
 button:hover {
-  background-color: #ffffff;
-  transform: translateY(-50%) scale(1.1);
+  background-color: #00000000;
 }
 
 button:focus {
@@ -372,37 +423,124 @@ button:focus {
 }
 
 /* Posicionamento dos botões */
+.prev2 {
+  left: -20px;  /* Ajuste a posição para que o botão anterior não fique cortado */
+}
+
+.next2 {
+  right: -20px;  /* Ajuste a posição para que o botão próximo não fique cortado */
+}
+
+/* Estilo base para os itens do carrossel */
+.servico-card, .certificado-card {
+  flex: 0 0 calc(100% / 3); /* 3 itens por slide no computador */
+  box-sizing: border-box;
+}
+
+/* Estilos para a seção de serviços */
+.servicos-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #000000;
+  margin-top: 15px;
+  margin-bottom: -20px;
+}
+
+.servicos-section h4 {
+  font-size: 15px;
+  color: #007AFF;
+  margin-bottom: -10px;
+}
+
+.servicos-section h3 {
+  font-size: 1.8rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.servicos-section p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  line-height: 1.9; /* Aumenta o espaço entre as linhas */
+}
+
+.carousel-container {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.servico-card {
+  background-color: rgb(0, 0, 0);
+  padding: 48px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 300px;
+  margin: 0 10px;
+  flex: 0 0 auto;
+  padding-left: 130px;
+}
+
+.servico-card img {
+  width: 70px;
+  margin-bottom: 15px;
+}
+
+.servico-card h3 {
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.servico-card p {
+  font-size: 15px;
+  color: #555;
+}
+
+button2 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0);
+  color: #007bff;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 12px 20px;
+  border-radius: 50%;
+  z-index: 100;
+}
+
+button2:hover {
+  background-color: #00000000;
+  color: #007AFF;
+  transform: translateY(-50%) scale(1.1);
+}
+
+button2:focus {
+  outline: none;
+}
+
 .prev {
-  left: 10px;  /* Ajuste a posição para que o botão anterior não fique cortado */
+  left: -20px;
 }
 
 .next {
-  right: 10px;  /* Ajuste a posição para que o botão próximo não fique cortado */
-}
-
- /* Rodapé */
- footer {
-  padding: 4px;
-  background-color: #05070a;
-  color: white;
-}
-
-.seta {
-  font-size: 1.rem;
-  transform: rotate(-45deg); /* Roda a seta na diagonal */
-  font-weight: bold; /* Torna a seta mais grossa */
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px; /* Ajuste o padding se necessário */
+  right: -20px;
 }
 
 /* Sessão de chamada para ação */
 .cta-section {
-  background-color: #05070a;
+  background-color: #007AFF;
   color: white;
   padding: 60px 20px;
   text-align: center;
@@ -414,12 +552,12 @@ button:focus {
   font-weight: bold;
   line-height: 1.0; /* Ajuste o valor conforme necessário */
   margin-top: 100px;
-  }
+}
 
 /* Botão  de CTA*/
 .cta-button {
-  background-color: #007BFF;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #007AFF;
   padding: 5px 30px;
   text-decoration: none;
   font-size: 20px;
@@ -432,7 +570,7 @@ button:focus {
 }
 
 .cta-button:hover {
-  background-color: #0056b3;
+  background-color: #000000;
   color: white;
 }
 
@@ -467,28 +605,47 @@ button:focus {
   cursor: pointer;
 }
 
+/* Rodapé */
+footer {
+  padding: 4px;
+  background-color: #007AFF;
+  color: white;
+}
+
+.seta {
+  font-size: 1.0rem;
+  transform: rotate(-45deg); /* Roda a seta na diagonal */
+  font-weight: bold; /* Torna a seta mais grossa */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px; /* Ajuste o padding se necessário */
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
   /* Cabeçalho Responsivo */
   header {
     position: fixed;
-    top: 0;
     width: 100%;
-    background-color: #007AFF;
+    background-color: #000000;
     z-index: 1000;
-    padding: 1px 20px; /* Ajustei o padding para ser mais compacto */
+    padding: 10px 110px;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    gap: 30px;
-    min-height: 60px; /* Defini a altura mínima do cabeçalho */
+    height: 60px; /* Define uma altura fixa para o cabeçalho */
   }
 
-  /* Esconder todos os outros elementos, exceto a logo */
-  .nav-sections,
-  .menu-toggle,
+  .section-title {
+    font-size: 3.5rem;
+    color: #000000; /* Alterado para preto */
+  }
+
   .cv-download-container {
     display: none;  
   }
@@ -503,13 +660,8 @@ button:focus {
 
   /* Aumentar o tamanho da logo no celular */
   .logo {
-    max-width: 550px; /* Aumente conforme necessário */
+    max-width: auto; /* Aumente conforme necessário */
     height: auto;
-  }
-
-  /* Ajustar o contêiner para uma direção coluna */
-  .container {
-    flex-direction: column;
   }
 
   /* Esconder a barra de navegação e outros botões */
@@ -517,64 +669,77 @@ button:focus {
     display: none;
   }
 
+  /* Estilo do botão Entre em Contato */
+  .entre-contato {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #007AFF;
+    padding: 10px 45px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: -20px;
+  }
+
+  .portfolio-description {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #ffffff; /* Deixa o texto branco */
+  }
+
   /* Seção de Certificados */
   .certificados-section {
-    padding: 60px 20px;
-    background-color: #ffffff;
-    text-align: center;
+    padding: 30px 10px;
   }
-
-  .section-title {
-    font-size: 3.5rem;
-    color: #007AFF;
+  
+  .certificados-title {
+    font-size: 2.5rem; /* Tamanho de fonte reduzido */
   }
-
-  .section-description {
-    font-size: 1.0rem;
-    color: #555;
-    margin-bottom: 20px;
-    text-align: center;
+  
+  .certificados-description {
+    font-size: 1rem;
   }
-
+  
   .certificados-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
+    flex-direction: column; /* Deixa os certificados em coluna */
+    align-items: center; /* Centraliza os itens */
   }
-
-  .certificado-card {
-    flex: 0 0 100%; /* Exibe 1 certificado por vez em telas menores */
-    max-width: 350px;
-    background-color: #007BFF;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    margin: 10px 0;
-    box-sizing: border-box;
+  
+  .certificado {
+    max-width: 100%;
+    width: 100%; /* Certificados ocupam 90% da largura */
+    margin-bottom: 20px; /* Espaço abaixo de cada certificado */
+    margin-top: 20px;  /* Espaço acima de cada certificado */
   }
-
-  .certificado-card img {
+  
+  .certificado img {
     max-width: 100%;
     height: auto;
-    margin-bottom: 20px;
   }
-
-  .certificado-button {
-    padding: 1px 10px;
-    font-size: 1rem;
-    margin-top: 8px;
-    display: inline-block;
-    background-color: white;
-    color: #007BFF;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    box-sizing: border-box;
+  
+  .certificado h3 {
+    font-size: 1.3rem;
   }
-
-  .certificado-button:hover {
-    background-color: #0056b3;
+  
+  .certificado p {
+    font-size: 0.9rem;
+  }
+  
+  .certificado .certificado-button {
+    font-size: 1rem; /* Ajuste no tamanho da fonte do botão */
+    padding: 8px 20px; /* Ajuste no tamanho do botão */
+    padding-left: 300px;
+  }
+  
+  .servico-card {
+    flex: 0 0 100%; /* Exibe 1 serviço por vez em telas menores */
+    max-width: 400px; /* Aumentei ligeiramente o tamanho */
+    padding: 20px; /* Aumentei o espaçamento interno */
+    margin: 15px 0; /* Aumenta o espaçamento entre os cartões */
+  }
+  
+  .cta-content h1 {
+    font-size: 2.0rem !important; /* Reduz o tamanho da fonte e força a aplicação */
+    text-align: center;
   }
 }
 
@@ -612,5 +777,23 @@ button:focus {
   .prev, .next {
     font-size: 1.2rem;  /* Reduz ainda mais o tamanho das setas para telas pequenas */
   }
+
+  .cta-content h1 {
+    font-size: 1.2rem !important; /* Reduz o tamanho da fonte e força a aplicação */
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .certificado-card {
+    flex: 0 0 100%; /* Exibe 1 serviço por vez em telas menores */
+    max-width: 215px; /* Aumentei ligeiramente o tamanho */
+    padding: 20px; /* Aumentei o espaçamento interno */
+    margin: 5px; /* Adiciona espaçamento entre os cartões */
+  }
+
+  .servicos-section h3 {
+    line-height: 1.2; /* Reduz o espaço entre as linhas */
+  }
+
 }
 
